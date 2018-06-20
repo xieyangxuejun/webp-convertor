@@ -70,7 +70,7 @@ def upload():
 
 @app.route('/show/<name>')
 def show(name):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], name)
+    return send_from_directory(CURRENT_DIRNAME + SEP + 'static', name)
 
 if __name__ == '__main__':
     app.run(
