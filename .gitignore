@@ -1,5 +1,6 @@
 # my
-/static
+/static/*.webp
+/uploads
 .idea
 
 # Byte-compiled / optimized / DLL files

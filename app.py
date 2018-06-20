@@ -9,7 +9,7 @@ from time import time
 
 SEP = os.sep
 CURRENT_DIRNAME = os.path.dirname(os.path.abspath(__file__))
-UPLOAD_FOLDER = CURRENT_DIRNAME + SEP + 'static'
+UPLOAD_FOLDER = CURRENT_DIRNAME + SEP + 'uploads'
 ALLOWED_EXTENSIONS = {'zip', 'png', 'gif'}
 
 app = Flask(__name__)
@@ -30,7 +30,7 @@ def upload():
         # create new dir
         time_stamp = str(int(time()))
         # mac
-        files_dir = CURRENT_DIRNAME + SEP + 'static' + SEP + time_stamp
+        files_dir = CURRENT_DIRNAME + SEP + 'uploads' + SEP + time_stamp
         print('files_dir====>' + files_dir)
         os.mkdir(files_dir)
 
